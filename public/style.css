@@ -1,0 +1,28 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #ccffff;
+}
+
+canvas {
+    display: block;
+    position: absolute;
+    width: 800px;  /* 幅を600pxに設定 */
+    height: 700px; /* 高さを400pxに設定 */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* 中央に配置 */
+    margin: auto;
+    background-color: #EEE;
+}
+
+#gameCanvas{
+    background-color: #EEE;
+}
+
+#playerid{
+    text-align: center;
+    color: #888;
+}
+
+

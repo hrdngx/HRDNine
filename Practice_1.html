@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Practice 1</title>
+        <meta charset="UTF-8">
+        <style>
+            body{
+                background-color: whitesmoke;
+                text-align: center;
+                padding: 0;
+                margin: 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                font-family: Arial, sans-serif;
+            }
+            #two{
+                color: black;
+                font-size: 20px;
+            }
+            #one{
+                color: red;
+                font-size: 300px
+            }
+
+            @keyframes rainbow {
+            0% { color: red; }
+            14% { color: orange; }
+            28% { color: yellow; }
+            42% { color: green; }
+            57% { color: blue; }
+            71% { color: indigo; }
+            85% { color: violet; }
+            100% { color: red; }
+            }
+
+            .rainbow {
+                display: inline-block;
+                animation: rainbow 2s infinite;
+            }
+
+            label{
+                font-size: 1.5rem;
+                color: yellow;
+            }
+            button {
+            background-color: yellow;
+            color: darkblue;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: gold;
+        }
+
+        input[type="text"] {
+            font-size: 1rem;
+            padding: 5px;
+        }
+        </style>
+    </head>
+    <body>
+        <div id="one">
+            <span id="text"></span>
+            <script>
+                var text = "NINE";
+                var length = text.length;
+            
+                var speed = 400;
+            
+                function typeWriter() {
+                    if (i < length) {
+                        var span = document.createElement("span");
+                        span.textContent = text.charAt(i);
+                        span.classList.add("rainbow");
+                        document.getElementById("text").appendChild(span);
+                        i++;
+                        setTimeout(typeWriter, speed);
+                    }
+                }
+            
+            
+                var i = 0;
+            
+                typeWriter();
+            </script>      
+        </div>
+        <div id="two">
+            <div id="ininvisi" >
+                <p>
+                    <label for="name">名前を入力してね</label>
+                </p>
+                <p>
+                    <form action="index.html">
+                        <input type="text" name="name">
+                        <button type="submit" onClick="btn1()">START</button>
+                    </form>
+                </p>
+            </div>
+            <script>
+               
+            </script>
+        </div>
+    </body>
+</html>
