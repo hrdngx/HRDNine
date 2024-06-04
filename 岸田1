@@ -39,3 +39,14 @@ function render() {
         }
     });
 }
+
+function renderPlayer(player, offsetX, offsetY, id) {
+    ctx.beginPath();
+    ctx.arc(player.x + offsetX, player.y + offsetY, player.size, 0, 2 * Math.PI);
+    ctx.fillStyle = player.color;
+    ctx.fill();
+    if (id) {
+        ctx.fillStyle = hColor(player.color);
+        ctx.fillText(`${id.substring(0, 5)}`, player.x + offsetX - 20, player.y + offsetY + 3);
+    }
+}
