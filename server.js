@@ -54,10 +54,13 @@ io.on('connection', (socket) => {
             player.x = Math.max(0, Math.min(data.x, 1600 - player.size));
             player.y = Math.max(0, Math.min(data.y, 1200 - player.size));
 
+            // 操作を受信
+            console.log(`操作が、来たにょ ${player.x} ${player.y}`);
+
             // 餌を食べる処理
             foods = foods.filter(food => {
                 const distance = Math.hypot(food.x - player.x, food.y - player.y);
-                if (distance < player.size) {
+                if (distance < player.size  && player.size < 80) {
                     player.size += 0.5;
                     return false;  // 餌を削除
                 }
@@ -69,14 +72,14 @@ io.on('connection', (socket) => {
                 if (id !== socket.id) {
                     const other = players[id];
                     const distance = Math.hypot(other.x - player.x, other.y - player.y);
-                    if (distance + 5 < player.size && player.size > other.size + 5) {
+                    if (distance + 5 < player.size && player.size > other.size + 5 && player.size < 80) {
                         player.size += other.size / 5;
                         delete players[id];
                         io.to(id).emit('respawn');
                     }
                 }
             }
-
+    
             // 全プレイヤーに状態を同期
             io.emit('update', { players, foods });
         }
