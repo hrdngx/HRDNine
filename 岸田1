@@ -1,0 +1,41 @@
+function render() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    const offsetX = canvas.width / 2 - currentPlayer.x;
+    const offsetY = canvas.height / 2 - currentPlayer.y;
+
+    foods.forEach(food => {
+        renderFood(food, offsetX, offsetY);
+    });
+
+    Object.keys(players).forEach(id => {
+        const player = players[id];
+        if (id === socket.id) {
+            renderPlayer(currentPlayer, canvas.width / 2, canvas.height / 2);
+        } else {
+            renderPlayer(player, offsetX, offsetY, id);
+        }
+    });
+}
+
+
+
+function render() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    const offsetX = canvas.width / 2 - currentPlayer.x;
+    const offsetY = canvas.height / 2 - currentPlayer.y;
+
+    foods.forEach(food => {
+        renderFood(food, offsetX, offsetY);
+    });
+
+    Object.keys(players).forEach(id => {
+        const player = players[id];
+        if (id === socket.id) {
+            renderPlayer(currentPlayer, canvas.width / 2, canvas.height / 2);
+        } else {
+            renderPlayer(player, offsetX, offsetY, id);
+        }
+    });
+}
