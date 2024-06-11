@@ -1,0 +1,43 @@
+// フリーモノイドを表すシールドクラスを定義
+sealed class FreeMonoid<out A> {
+    // 空のモノイドを表すオブジェクト
+    object Empty : FreeMonoid<Nothing>()
+    
+    // 純粋な値を保持するモノイドを表すデータクラス
+    data class Pure<out A>(val value: A) : FreeMonoid<A>()
+    
+    // 2つのモノイドの結合を表すデータクラス
+    data class Append<out A>(val left: FreeMonoid<A>, val right: FreeMonoid<A>) : FreeMonoid<A>()
+}
+
+// 空のモノイドを返す関数
+fun <A> mempty(): FreeMonoid<A> = FreeMonoid.Empty
+
+// 2つのモノイドを結合する関数
+fun <A> mappend(m1: FreeMonoid<A>, m2: FreeMonoid<A>): FreeMonoid<A> = 
+    // m1の型に応じて処理を分岐
+    when (m1) {
+        // m1がEmptyの場合、m2を返す
+        is FreeMonoid.Empty -> m2
+        // m1がPureの場合、m1とm2を結合してAppendを返す
+        is FreeMonoid.Pure -> FreeMonoid.Append(m1, m2)
+        // m1がAppendの場合、そのままAppendを返す
+        is FreeMonoid.Append -> FreeMonoid.Append(m1, m2)
+    }
+
+// 値を持つ純粋なモノイドを作成する関数
+fun <A> pure(value: A): FreeMonoid<A> = FreeMonoid.Pure(value)
+
+// テスト用の関数
+fun main() {
+    // 純粋なモノイドを3つ作成
+    val m1 = pure(1)
+    val m2 = pure(2)
+    val m3 = pure(3)
+
+    // m1と(m2とm3の結合)を結合
+    val combined = mappend(m1, mappend(m2, m3))
+
+    // 結果を表示
+    println(combined)
+}
