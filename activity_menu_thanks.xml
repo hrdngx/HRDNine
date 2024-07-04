@@ -1,15 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--
-『Androidアプリ開発の教科書』
-第7章
-画面遷移サンプル
 
-注文完了画面定義ファイル。
-
-@author Shinzo SAITO
-
-ファイル名=activity_menu_thanks.xml
--->
 <androidx.constraintlayout.widget.ConstraintLayout
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	xmlns:app="http://schemas.android.com/apk/res-auto"
