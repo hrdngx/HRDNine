@@ -14,15 +14,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-/**
- * 『Androidアプリ開発の教科書』
- * 第7章
- * 画面遷移サンプル
- *
- * メニューリスト画面のアクティビティクラス。
- *
- * @author Shinzo SAITO
- */
+
 public class MainActivity extends AppCompatActivity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
