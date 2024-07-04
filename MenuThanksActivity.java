@@ -7,15 +7,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-/**
- * 『Androidアプリ開発の教科書』
- * 第7章
- * 画面遷移サンプル
- *
- * 注文完了画面のアクティビティクラス。
- *
- * @author Shinzo SAITO
- */
 public class MenuThanksActivity extends AppCompatActivity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
