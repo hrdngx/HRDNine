@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-07-05T01:24:25.096Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" etag="7s9hJQgpgFdBSADYoceH" version="24.6.4" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2024-07-05T01:29:41.044Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" etag="G7AaX0M97jFSsMszw4l6" version="24.6.4" type="github" pages="2">
   <diagram name="ページ1" id="PjovX_DnfIpz0J4LrwaW">
     <mxGraphModel dx="3098" dy="1369" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -206,10 +206,13 @@
     </mxGraphModel>
   </diagram>
   <diagram name="ページ1のコピー" id="ktKkLM5TYFKdbGdzPwie">
-    <mxGraphModel dx="3385" dy="1490" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2868" dy="1272" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="LeUiIcLvKOep62EWzqUP-0" />
         <mxCell id="LeUiIcLvKOep62EWzqUP-1" parent="LeUiIcLvKOep62EWzqUP-0" />
+        <mxCell id="ee0duNsLG5vYrk6HXB1_-0" value="" style="whiteSpace=wrap;html=1;" vertex="1" parent="LeUiIcLvKOep62EWzqUP-1">
+          <mxGeometry x="230" y="439" width="520" height="417" as="geometry" />
+        </mxCell>
         <mxCell id="LeUiIcLvKOep62EWzqUP-2" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="LeUiIcLvKOep62EWzqUP-1">
           <mxGeometry x="-511" y="-39.93" width="555" height="429" as="geometry" />
         </mxCell>
@@ -407,6 +410,9 @@
             <mxPoint x="140" y="487" as="sourcePoint" />
             <mxPoint x="190" y="437" as="targetPoint" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="ee0duNsLG5vYrk6HXB1_-1" value="利用者セグメント" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" vertex="1" parent="LeUiIcLvKOep62EWzqUP-1">
+          <mxGeometry x="591" y="776" width="150" height="68" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
