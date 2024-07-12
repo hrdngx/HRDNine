@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-07-12T01:22:16.440Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" etag="gqDfFJI-6MoaC1v_Wtrb" version="24.6.5" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2024-07-12T01:22:57.943Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" etag="XcoztzlicS9FQirk5NQn" version="24.6.5" type="github" pages="2">
   <diagram name="ページ1" id="PjovX_DnfIpz0J4LrwaW">
     <mxGraphModel dx="2244" dy="1164" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -229,7 +229,7 @@
         <mxCell id="ziOiXydjQFaTyok0d3w3-16" value="&lt;div style=&quot;font-size: 17px;&quot;&gt;ルーター&lt;/div&gt;" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=17;" vertex="1" parent="1">
           <mxGeometry x="109.03999999999999" y="36" width="95.5" height="49" as="geometry" />
         </mxCell>
-        <mxCell id="ziOiXydjQFaTyok0d3w3-20" value="&lt;div style=&quot;font-size: 17px;&quot;&gt;ルーター&lt;/div&gt;" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=17;" vertex="1" parent="1">
+        <mxCell id="ziOiXydjQFaTyok0d3w3-20" value="&lt;span style=&quot;font-size: 30px;&quot;&gt;Q社&lt;/span&gt;" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=17;" vertex="1" parent="1">
           <mxGeometry x="-502" y="-252" width="191" height="99" as="geometry" />
         </mxCell>
       </root>
