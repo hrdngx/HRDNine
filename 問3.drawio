@@ -1,11 +1,11 @@
-<mxfile host="app.diagrams.net" modified="2024-07-12T01:08:57.398Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" etag="4iv8-ycMoQ73kf8_a3jp" version="24.6.5" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2024-07-12T01:15:24.607Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" etag="V5WMfgKz4U_FwrvTEup0" version="24.6.5" type="github" pages="2">
   <diagram name="ページ1" id="PjovX_DnfIpz0J4LrwaW">
-    <mxGraphModel dx="1522" dy="782" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2564" dy="1333" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="ziOiXydjQFaTyok0d3w3-6" value="" style="whiteSpace=wrap;html=1;aspect=fixed;align=left;" vertex="1" parent="1">
-          <mxGeometry x="-539" y="-290" width="1357" height="1357" as="geometry" />
+          <mxGeometry x="-536" y="-278" width="1357" height="1357" as="geometry" />
         </mxCell>
         <mxCell id="ziOiXydjQFaTyok0d3w3-2" value="" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
           <mxGeometry x="237" y="425" width="539" height="539" as="geometry" />
@@ -170,7 +170,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="DrKxHcsU2RTHfQZ3V-Yh-86" value="内部DNS&lt;div style=&quot;font-size: 17px;&quot;&gt;サーバ&lt;/div&gt;" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=17;" parent="1" vertex="1">
-          <mxGeometry x="-299.75" y="-13" width="95.5" height="49" as="geometry" />
+          <mxGeometry x="-299.75" y="-13" width="96.75" height="49" as="geometry" />
         </mxCell>
         <mxCell id="DrKxHcsU2RTHfQZ3V-Yh-87" value="&lt;div style=&quot;font-size: 17px;&quot;&gt;PC管理&lt;br style=&quot;font-size: 17px;&quot;&gt;サーバ&lt;/div&gt;" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=17;" parent="1" vertex="1">
           <mxGeometry x="-120.5" y="-11" width="95.5" height="49" as="geometry" />
@@ -207,6 +207,9 @@
             <mxPoint x="140" y="487" as="sourcePoint" />
             <mxPoint x="190" y="437" as="targetPoint" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="ziOiXydjQFaTyok0d3w3-12" value="利用者セグメント" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=17;" vertex="1" parent="1">
+          <mxGeometry x="571" y="863" width="177" height="68" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
