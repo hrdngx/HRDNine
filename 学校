@@ -1,0 +1,3 @@
+Math.min(currentPlayer.y, 1600 - currentPlayer.size)
+
+Math.max(0, currentPlayer.x)
