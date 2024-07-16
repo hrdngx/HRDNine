@@ -1,0 +1,84 @@
+dependencies {
+    implementation 'com.google.android.material:material:1.4.0'
+    implementation 'androidx.appcompat:appcompat:1.3.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.0'
+    implementation 'com.prolificinteractive:material-calendarview:2.0.0'
+}
+
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+        android:id="@+id/calendarView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"/>
+
+    <EditText
+        android:id="@+id/taskEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/calendarView"
+        android:hint="Enter your task here"
+        android:layout_margin="16dp"/>
+
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/taskEditText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="Save Task" />
+
+</RelativeLayout>
+
+package com.example.calendarapp
+
+import android.os.Bundle
+import android.widget.Button
+import android.widget.EditText
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import com.prolificinteractive.materialcalendarview.MaterialCalendarView
+import com.prolificinteractive.materialcalendarview.OnDateSelectedListener
+import com.prolificinteractive.materialcalendarview.CalendarDay
+
+class MainActivity : AppCompatActivity() {
+
+    private lateinit var calendarView: MaterialCalendarView
+    private lateinit var taskEditText: EditText
+    private lateinit var saveButton: Button
+
+    private var selectedDate: CalendarDay? = null
+    private val tasks = mutableMapOf<CalendarDay, String>()
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+        calendarView = findViewById(R.id.calendarView)
+        taskEditText = findViewById(R.id.taskEditText)
+        saveButton = findViewById(R.id.saveButton)
+
+        calendarView.setOnDateChangedListener(OnDateSelectedListener { _, date, _ ->
+            selectedDate = date
+            taskEditText.setText(tasks[date] ?: "")
+        })
+
+        saveButton.setOnClickListener {
+            val task = taskEditText.text.toString()
+            if (selectedDate != null) {
+                tasks[selectedDate!!] = task
+                Toast.makeText(this, "Task saved for ${selectedDate!!.date}", Toast.LENGTH_SHORT).show()
+            } else {
+                Toast.makeText(this, "Please select a date first", Toast.LENGTH_SHORT).show()
+            }
+        }
+    }
+}
