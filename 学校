@@ -5,3 +5,117 @@ Math.max(0, currentPlayer.x)
 ボリュームを使って、課題2 で行ったLED で、一番左側にボリュームがあるときは、全く表示しないで、ボリュームが一番右
 に回したときには全部点灯する。ボリュームがその間いるときは、ボリュームの位置によって均等にLED の点灯を1 から順
 に点灯させなさい。
+
+import RPi.GPIO as GPIO
+import time
+
+# 各GPIOピンの番号を設定
+pin1 = 20
+pin2 = 19
+pin3 = 18
+pin4 = 17
+pin5 = 16
+pin6 = 15
+pin7 = 14
+pin8 = 13
+pin9 = 12
+pin10 = 11
+
+# GPIOの初期設定
+GPIO.setmode(GPIO.BCM)
+GPIO.setwarnings(False)
+
+# 各ピンを出力モードに設定し、初期状態をLOWに設定
+GPIO.setup(pin1, GPIO.OUT)
+GPIO.setup(pin2, GPIO.OUT)
+GPIO.setup(pin3, GPIO.OUT)
+GPIO.setup(pin4, GPIO.OUT)
+GPIO.setup(pin5, GPIO.OUT)
+GPIO.setup(pin6, GPIO.OUT)
+GPIO.setup(pin7, GPIO.OUT)
+GPIO.setup(pin8, GPIO.OUT)
+GPIO.setup(pin9, GPIO.OUT)
+GPIO.setup(pin10, GPIO.OUT)
+
+GPIO.output(pin1, GPIO.LOW)
+GPIO.output(pin2, GPIO.LOW)
+GPIO.output(pin3, GPIO.LOW)
+GPIO.output(pin4, GPIO.LOW)
+GPIO.output(pin5, GPIO.LOW)
+GPIO.output(pin6, GPIO.LOW)
+GPIO.output(pin7, GPIO.LOW)
+GPIO.output(pin8, GPIO.LOW)
+GPIO.output(pin9, GPIO.LOW)
+GPIO.output(pin10, GPIO.LOW)
+
+tento = 0  # 現在点灯している
+ido = 1  # LEDの移動きょり
+
+# メインループ
+try:
+    nowtime = time.time()
+
+    while True:
+        
+        # 現在の時間を取得
+        current_time = time.time()
+        # 1秒経過
+        if current_time - nowtime >= 1:
+
+            # 前回のLEDを消灯
+            if tento == 0:
+                GPIO.output(pin1, GPIO.LOW)
+            elif tento == 1:
+                GPIO.output(pin2, GPIO.LOW)
+            elif tento == 2:
+                GPIO.output(pin3, GPIO.LOW)
+            elif tento == 3:
+                GPIO.output(pin4, GPIO.LOW)
+            elif tento == 4:
+                GPIO.output(pin5, GPIO.LOW)
+            elif tento == 5:
+                GPIO.output(pin6, GPIO.LOW)
+            elif tento == 6:
+                GPIO.output(pin7, GPIO.LOW)
+            elif tento == 7:
+                GPIO.output(pin8, GPIO.LOW)
+            elif tento == 8:
+                GPIO.output(pin9, GPIO.LOW)
+            elif tento == 9:
+                GPIO.output(pin10, GPIO.LOW)
+            
+            # 次のLEDを点灯
+            tento += ido
+            if tento >= 10:
+                tento = 9
+                ido = -1
+            elif tento < 0:
+                tento = 0
+                ido = 1
+
+            if tento == 0:
+                GPIO.output(pin1, GPIO.HIGH)
+            elif tento == 1:
+                GPIO.output(pin2, GPIO.HIGH)
+            elif tento == 2:
+                GPIO.output(pin3, GPIO.HIGH)
+            elif tento == 3:
+                GPIO.output(pin4, GPIO.HIGH)
+            elif tento == 4:
+                GPIO.output(pin5, GPIO.HIGH)
+            elif tento == 5:
+                GPIO.output(pin6, GPIO.HIGH)
+            elif tento == 6:
+                GPIO.output(pin7, GPIO.HIGH)
+            elif tento == 7:
+                GPIO.output(pin8, GPIO.HIGH)
+            elif tento == 8:
+                GPIO.output(pin9, GPIO.HIGH)
+            elif tento == 9:
+                GPIO.output(pin10, GPIO.HIGH)
+            
+            # 時間を更新
+            nowtime = current_time
+
+finally:
+    GPIO.cleanup()
