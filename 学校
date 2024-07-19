@@ -1,3 +1,7 @@
 Math.min(currentPlayer.y, 1600 - currentPlayer.size)
 
 Math.max(0, currentPlayer.x)
+
+ボリュームを使って、課題2 で行ったLED で、一番左側にボリュームがあるときは、全く表示しないで、ボリュームが一番右
+に回したときには全部点灯する。ボリュームがその間いるときは、ボリュームの位置によって均等にLED の点灯を1 から順
+に点灯させなさい。
